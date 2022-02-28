@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  type="text" id="nhapso" style="width:200px" onchange="bam1()">
+<input type ='button' value="tính số ngày"onclick="bam1">
+<h1 id="hien thi"> </h1>
+</body>
+<script>
+    function bam1() {
+        let so = +document.getElementById('nhapso').value;
+        let ketQua
+        switch (so) {
+            case 1:
+            case 3:
+            case 5:
+            case 8:
+            case 10:
+            case 12:
+                ketQua = 'so ngay la :31';
+                break
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                ketQua = 'so ngay la 30';
+                break
+            case 2:
+                ketQua = 'so ngay la 28,39'
+                break
+            default : document.write('khong co');
+        }
+        document.getElementById('hien thi').innerHTML='Ket qua la:'+ketQua;
+    }
+
+</script>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng good-fast-cheap</title>
+</head>
+<body>
+
+<input type="range" id="good" min="0" max="5" style="max-width: 35px" onclick="moveGood()"><b>Good</b><br>
+<input type="range" id="cheap" min="0" max="5" style="max-width: 35px" onclick="moveCheap()"><b>Cheap</b><br>
+<input type="range" id="fast" min="0" max="5" style="max-width: 35px" onclick="moveFast()"><b>Fast</b>
+
+</body>
+</html>
+
+<script>
+
+
+    // function macDinh(){
+    //     good.value = 5
+    //     cheap.value = 0
+    //     fast.value = 5
+    // }
+    let good = false;
+    let cheap = false;
+    let fast = false;
+
+    function moveGood() {
+        console.log('good đầu vào ', good)
+        good = !good;
+        if (good) {
+            document.getElementById('good').value = 5
+            if (cheap && fast) {
+                document.getElementById('fast').value = 0;
+                fast = false;
+            }
+        }
+        else {
+            good = document.getElementById('good').value = 0
+        }
+    }
+
+    function moveCheap() {
+        cheap = !cheap;
+        if (cheap) {
+            cheap = document.getElementById('cheap').value = 5
+            if (good && fast) {
+                document.getElementById('good').value = 0;
+                good = false;
+            }
+        }
+        else {
+            cheap = document.getElementById('cheap').value = 0
+        }
+    }
+
+    function moveFast() {
+        fast = !fast;
+        if (fast) {
+            cheap = document.getElementById('cheap').value = 5
+            if (good && cheap) {
+                document.getElementById('cheap').value = 0;
+                cheap = false;
+            }
+        }
+        else {
+            cheap = document.getElementById('cheap').value = 0
+        }
+    }
+</script>

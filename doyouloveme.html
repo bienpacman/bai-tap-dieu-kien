@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #nhay {
+        position: relative;
+    }
+</style>
+<body>
+<h1>Do you love me?</h1>
+<button id="nhay" onmouseover="yes()">Yes</button>
+<button onclick="no()" >No</button>
+
+</body>
+<script>
+    let myNo = document.getElementById('nhay')
+    function no(){
+        alert('<3')
+    }
+    function yes() {
+        let a = Math.random() * window.innerWidth/2;
+        let b = Math.random() * window.innerHeight/2;
+        myNo.style.left = a +'px';
+        myNo.style.top = b +'px';
+    }
+</script>
+
+</html>

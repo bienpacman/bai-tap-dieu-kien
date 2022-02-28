@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="sr1" type="number">;
+<input id ="sr2" type="number">;
+<button onclick="kiemTra()">
+    Enter
+</button>
+
+</body>
+<script>
+    function kiemTra() {
+        let a = document.getElementById('sr1').value;
+
+        let b = document.getElementById('sr2').value;
+        if (a%b==0) {
+            alert('a chia het cho b')
+           // document.write('a chia het cho b');
+        }else {
+            alert('a khong chia het cho b')
+           // document.write('a khong chia het cho b') ;
+        }
+    }
+
+</script>
+
+</html>
